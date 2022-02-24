@@ -6,7 +6,7 @@
 
   <body>
 
-<%= flash[:notice] %>
+   <%= flash[:notice] %>
     <p id="notice"></p>
     <h1>Books</h1>
     <table>
@@ -32,7 +32,7 @@
      <% end %>
   </tbody>
 
-    </table>k
+    </table>
     <% if @book.errors.any? %>
     <%= @book.errors.count %> errors prohibited this book from being saved:
     <ul>
