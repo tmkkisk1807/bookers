@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>WebCampBackendNew</title>
   </head>
 
@@ -23,9 +24,9 @@
       <th><%= book.title %></th>
       <th><%= book.body %></th>
       <th>
-      <%= link_to 'show', book_path(book.id) %>
-      <%= link_to 'edit', edit_book_path(book.id) %>
-      <%= link_to 'destroy',book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
+      <%= link_to 'Show', book_path(book.id) %>
+      <%= link_to 'Edit', edit_book_path(book.id) %>
+      <%= link_to 'Destroy', book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
       </th>
       </tr>
      <% end %>
@@ -43,7 +44,7 @@
 
       <h2>New Book</h2>
       <%= form_with model: @book, local:true do |f| %>
-      <h4>title</h4>
+      <h4>Title</h4>
       <%= f.text_field :title %>
       <h4>Body</h4>
       <%= f.text_area :body %>
